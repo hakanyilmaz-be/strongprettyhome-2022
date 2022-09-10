@@ -8,7 +8,8 @@ import AccountDrawer from "./screens/drawer/account-drawer";
 import FavoriteDrawer from "./screens/drawer/favorite-drawer";
 import SettingsDrawer from "./screens/drawer/settings-drawer";
 import ContactDrawer from "./screens/drawer/contact-drawer";
-import { createDrawerNavigator } from "react-navigation-drawer";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+
 
 const Drawer = createDrawerNavigator();
 
@@ -25,19 +26,19 @@ export default function App() {
       drawerContent={ (props)=> <DrawerContent {...props}/>}
       >
         <Drawer.Screen name="home" component={HomeDrawer} options={{
-          title:"Products",
+          title:"House",
           drawerIcon: ()=> <FaIcon name="home"/>
         }} />
         <Drawer.Screen name="account" component={AccountDrawer} options={{
-          title:"Profile",
+          title:"Acount",
           drawerIcon: ()=> <FaIcon name="user"/>
         }} />
         <Drawer.Screen name="favorite" component={FavoriteDrawer} options={{
-          title:"Followers",
-          drawerIcon: ()=> <FaIcon name="users"/>
+          title:"Favorites",
+          drawerIcon: ()=> <FaIcon name="heart"/>
         }}/>
         <Drawer.Screen name="contact" component={ContactDrawer} options={{
-          title:"Followers",
+          title:"Contact",
           drawerIcon: ()=> <FaIcon name="users"/>
         }}/>
         <Drawer.Screen name="settings" component={SettingsDrawer} options={{
